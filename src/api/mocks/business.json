@@ -1,0 +1,86 @@
+{
+	"dashboard": {
+		"total_cartons": 3,
+		"in_storage": 2,
+		"open_requests": 2,
+		"retention_alerts": 1
+	},
+	"cartons": [
+		{
+			"carton_id": "CTN-001",
+			"document_type": "Loan Documents",
+			"entity_id": "ENT-001",
+			"department_id": "DEPT-001",
+			"location_id": "LOC-001",
+			"vendor_id": "VND-001",
+			"current_status": "IN_STORAGE",
+			"retention_expiry_date": "2027-03-31",
+			"allowed_actions": ["CREATE_REQUEST", "ADD_FILES"],
+			"files": [
+				{
+					"file_id": "FILE-001",
+					"file_name": "Loan Agreement"
+				}
+			],
+			"events": [
+				{
+					"event_id": "EVT-001",
+					"event_type": "CARTON_CREATED",
+					"created_at": "2026-10-01"
+				}
+			]
+		},
+		{
+			"carton_id": "CTN-002",
+			"document_type": "KYC Records",
+			"entity_id": "ENT-001",
+			"department_id": "DEPT-001",
+			"location_id": "LOC-002",
+			"vendor_id": "VND-001",
+			"current_status": "IN_STORAGE",
+			"retention_expiry_date": "2026-11-15",
+			"allowed_actions": ["CREATE_REQUEST"],
+			"files": [],
+			"events": []
+		},
+		{
+			"carton_id": "CTN-003",
+			"document_type": "Account Statements",
+			"entity_id": "ENT-001",
+			"department_id": "DEPT-001",
+			"location_id": null,
+			"vendor_id": "VND-001",
+			"current_status": "PENDING_PICKUP",
+			"retention_expiry_date": "2028-01-01",
+			"allowed_actions": ["ADD_FILES"],
+			"files": [],
+			"events": []
+		}
+	],
+	"requests": [
+		{
+			"request_id": "REQ-001",
+			"carton_id": "CTN-001",
+			"request_type": "RETRIEVAL",
+			"current_status": "PENDING",
+			"created_at": "2026-10-05"
+		},
+		{
+			"request_id": "REQ-002",
+			"carton_id": "CTN-003",
+			"request_type": "PICKUP",
+			"current_status": "IN_PROGRESS",
+			"created_at": "2026-10-07"
+		}
+	],
+	"retentionAlerts": [
+		{
+			"alert_id": "ALT-001",
+			"carton_id": "CTN-002",
+			"document_type": "KYC Records",
+			"retention_expiry_date": "2026-11-15",
+			"alert_type": "EXPIRING_SOON",
+			"legal_hold_status": "NOT_ON_HOLD"
+		}
+	]
+}

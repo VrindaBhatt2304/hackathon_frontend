@@ -1,0 +1,37 @@
+{
+	"dashboard": {
+		"total_requests": 3,
+		"pending_requests": 1,
+		"in_progress": 1,
+		"completed": 1
+	},
+	"requests": [
+		{
+			"request_id": "REQ-001",
+			"carton_id": "CTN-001",
+			"request_type": "RETRIEVAL",
+			"current_status": "PENDING",
+			"created_at": "2026-10-05",
+			"updated_at": "2026-10-05",
+			"allowed_actions": ["ACKNOWLEDGE"]
+		},
+		{
+			"request_id": "REQ-002",
+			"carton_id": "CTN-003",
+			"request_type": "PICKUP",
+			"current_status": "IN_PROGRESS",
+			"created_at": "2026-10-07",
+			"updated_at": "2026-10-08",
+			"allowed_actions": ["CONFIRM_COLLECTION"]
+		},
+		{
+			"request_id": "REQ-003",
+			"carton_id": "CTN-002",
+			"request_type": "RETURN",
+			"current_status": "COMPLETED",
+			"created_at": "2026-10-02",
+			"updated_at": "2026-10-04",
+			"allowed_actions": []
+		}
+	]
+}
